@@ -1,6 +1,12 @@
+import BookList from "./BookList";
+import AddBooks from "./AddBooks";
+
 function Books() {
   return (
-    <div>books</div>
+    <div>
+      <BookList />
+      <AddBooks />
+    </div>
   )
 }
 

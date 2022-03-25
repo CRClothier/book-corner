@@ -1,5 +1,5 @@
 function Catalogue() {
-  return <div>catalogue</div>
+  return <button>Check Status</button>
 }
 
 export default Catalogue;
