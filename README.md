@@ -23,6 +23,8 @@ To get a local copy up and running follow these simple example steps.
 - Click on the top right green "code" button.
 - On the dropdown menu, choose "download with zip" button.
 - After download, extract the zip file and you have the project running on your machine.
+- `cd` into the correct directory and `npm install` to intall dependecies.
+- Start the project in your browser using `npm start`.
 
 ## Authors
 
