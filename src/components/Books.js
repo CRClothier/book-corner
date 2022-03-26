@@ -1,5 +1,5 @@
-import BookList from "./BookList";
-import AddBooks from "./AddBooks";
+import BookList from './BookList';
+import AddBooks from './AddBooks';
 
 function Books() {
   return (
@@ -7,7 +7,7 @@ function Books() {
       <BookList />
       <AddBooks />
     </div>
-  )
+  );
 }
 
 export default Books;

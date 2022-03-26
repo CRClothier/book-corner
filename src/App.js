@@ -9,9 +9,9 @@ function App() {
       <header className="App-header">
         <h1>The Book Corner</h1>
         <nav>
-          <Link className='link' to="/">Books</Link>
-          <Link className='link' to="/catalogue">Catalogue</Link>
-        </nav> 
+          <Link className="link" to="/">Books</Link>
+          <Link className="link" to="/catalogue">Catalogue</Link>
+        </nav>
       </header>
       <main>
         <Routes>
