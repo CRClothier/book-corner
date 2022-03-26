@@ -1,5 +1,5 @@
-function Catalogue() {
+function Catagories() {
   return <button type="button">Check Status</button>;
 }
 
-export default Catalogue;
+export default Catagories;
