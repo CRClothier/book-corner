@@ -11,6 +11,7 @@ A one page app to add and remove books from a list.
 - HTML/CSS/JavaScript
 - Create React App
 - React Router
+- Redux
 
 ## Live Demo
 
