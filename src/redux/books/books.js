@@ -6,12 +6,12 @@ const defaultState = [
   {
     name: 'Harry Potter',
     author: 'J K Rowling',
-    id: 1,
+    id: '1',
   },
   {
     name: 'Alice in Wonderland',
     author: 'Lewis Caroll',
-    id: 2,
+    id: '2',
   },
 ];
 
@@ -19,7 +19,8 @@ const defaultState = [
 export default function booksReducer(state = defaultState, action) {
   switch (action.type) {
     case (ADD_BOOK):
-      return [...state].push(action.new);
+      console.log([...state].push(action.new));
+      return [...state, action.new];
 
     case (REMOVE_BOOK):
       return state.filter((book) => book.id !== action.id);

@@ -6,6 +6,7 @@ function Booklist() {
   const list = bookArray.map((book) => (
     <Book
       key={book.id}
+      id={book.id}
       name={book.name}
       author={book.author}
     />
