@@ -19,7 +19,6 @@ const defaultState = [
 export default function booksReducer(state = defaultState, action) {
   switch (action.type) {
     case (ADD_BOOK):
-      console.log([...state].push(action.new));
       return [...state, action.new];
 
     case (REMOVE_BOOK):
