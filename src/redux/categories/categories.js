@@ -1,5 +1,5 @@
 // Actions
-const CHECK_STATUS = 'ADD_BOOK';
+const CHECK_STATUS = 'CHECK_STATUS';
 
 // Reducer
 export default function categoriesReducer(state = [], action) {

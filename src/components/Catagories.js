@@ -1,5 +1,14 @@
+import { useDispatch } from 'react-redux';
+import { checkStatus } from '../redux/categories/categories';
+
 function Catagories() {
-  return <button type="button">Check Status</button>;
+  const dispatch = useDispatch();
+  const dispatchCheckStatus = (e) => {
+    e.preventDefault();
+    dispatch(checkStatus());
+  };
+
+  return <button type="button" onClick={dispatchCheckStatus}>Check Status</button>;
 }
 
 export default Catagories;
