@@ -1,4 +1,5 @@
-import { combineReducers, createStore } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import booksReducer from './books/books';
 import categoriesReducer from './categories/categories';
 
@@ -7,9 +8,9 @@ const rootReducer = combineReducers({
   categories: categoriesReducer,
 });
 
-const store = createStore( // eslint-disable-line no-unused-vars
+const store = createStore(
   rootReducer,
-  {},
+  applyMiddleware(thunk),
 );
 
 export { rootReducer, store };
