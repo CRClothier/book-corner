@@ -1,7 +1,7 @@
 import BookList from './BookList';
 import AddBooks from './AddBooks';
 
-function Books() {
+function BooksPage() {
   return (
     <div>
       <BookList />
@@ -10,4 +10,4 @@ function Books() {
   );
 }
 
-export default Books;
+export default BooksPage;
