@@ -24,12 +24,15 @@ function AddBooks() {
   };
 
   return (
-    <form>
-      <input type="text" placeholder="Title" value={title || ''} onChange={(e) => { setTitle(e.target.value); }} />
-      <input type="text" placeholder="Author" value={author || ''} onChange={(e) => { setAuthor(e.target.value); }} />
-      <input type="text" placeholder="Genre" value={category || ''} onChange={(e) => { setCategory(e.target.value); }} />
-      <button onClick={addBookDispatch} type="submit">Add book</button>
-    </form>
+    <div className="addBooks">
+      <h2>ADD NEW BOOK</h2>
+      <form>
+        <input className="input" type="text" placeholder="Title" value={title || ''} onChange={(e) => { setTitle(e.target.value); }} />
+        <input className="input" type="text" placeholder="Author" value={author || ''} onChange={(e) => { setAuthor(e.target.value); }} />
+        <input className="input" type="text" placeholder="Genre" value={category || ''} onChange={(e) => { setCategory(e.target.value); }} />
+        <button onClick={addBookDispatch} type="submit">Add book</button>
+      </form>
+    </div>
   );
 }
 

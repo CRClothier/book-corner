@@ -166,13 +166,12 @@ button.edit {
 
 /* Add Book Form */
 
-.form-container {
+.addBooks {
   border-top: 1px solid #e8e8e8;
   margin: 0 7vw;
 }
 
 h2 {
-  font-family: 'Montserrat', serif;
   font-weight: bold;
   color: #888;
   margin: 1.813rem 0 1.188rem 0;
@@ -188,18 +187,15 @@ form {
   width: 23%;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
-  color: #c4c4c4;
   padding-left: 1rem;
-  font-family: 'Montserrat', serif;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .input::placeholder {
   color: #c4c4c4;
-  font-family: 'Montserrat', serif;
 }
 
-.submit-btn {
+.addBooks button {
   height: 2.813rem;
   width: 20%;
   font-family: 'Roboto Slab', sans-serif;
@@ -207,7 +203,7 @@ form {
   font-size: 0.813rem;
   background-color: #0290ff;
   border: none;
-  color: #fff;
+  color: white;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
   cursor: pointer;
@@ -220,7 +216,7 @@ form {
   font-size: 0.813rem;
   background-color: #0290ff;
   border: none;
-  color: #fff;
+  color: white;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
   cursor: pointer;
