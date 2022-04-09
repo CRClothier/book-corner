@@ -15,7 +15,7 @@ function App() {
             <Link className="link" to="/catalogue">Catalogue</Link>
           </nav>
         </div>
-        <img className="login" src={login} width="45px" alt="user" />
+        <img className="login" src={login} alt="user" />
       </header>
       <main>
         <Routes>

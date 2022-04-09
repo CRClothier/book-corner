@@ -38,6 +38,7 @@ nav {
 }
 
 .login {
+  width: 45px;
   justify-content: flex-end;
   margin-right: 7vw;
 }
@@ -54,7 +55,6 @@ nav {
 /* Book styles */
 
 .book {
-  height: 6.625rem;
   background-color: white;
   border: 1px solid #e8e8e8;
   display: grid;
@@ -88,7 +88,6 @@ nav {
 }
 
 .left button {
-  height: 1.188rem;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;

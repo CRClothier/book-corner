@@ -15,7 +15,7 @@ A one page app to add and remove books from a list.
 
 ## Live Demo
 
-[Netlify Live Demo](https://6251e3d5e0d9b75cb39cc212--tubular-bonbon-99bebd.netlify.app)
+[Netlify Live Demo](https://deploy-preview-5--tubular-bonbon-99bebd.netlify.app)
 
 ## Getting Started
 
