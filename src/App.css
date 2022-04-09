@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #fafafa;
 }
 
+/* Header styles */
+
 header {
-  background-color: #fff;
+  background-color: white;
+  border-bottom: 1px solid #e8e8e8;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e8e8e8;
   margin-bottom: 2.375rem;
 }
 
@@ -22,7 +25,7 @@ header {
 }
 
 .title {
-  font-family: 'Montserrat', serif;
+  white-space: nowrap;
   color: #0290ff;
   font-size: 1.8rem;
   width: 15rem;
@@ -44,31 +47,31 @@ nav {
   text-transform: uppercase;
   font-size: 0.83rem;
   color: #121212;
-  font-family: 'Montserrat', serif;
   margin-left: 1rem;
   padding: 1rem;
 }
 
-.book-container {
-  display: grid;
-  grid-template-columns: 40% 30% 30%;
-  margin: 0 7.14% 0.938rem 7.14%;
-  background-color: #fff;
-  border: 1px solid #e8e8e8;
+/* Book styles */
+
+.book {
   height: 6.625rem;
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr;
+  margin: 0 7vw 0.938rem 7vw;
   padding: 2rem;
 }
 
-.book-category {
+.category {
   color: #121212;
   font-size: 0.875rem;
   opacity: 0.5;
   margin: 0 0 0.25rem 0;
-  font-family: 'Montserrat', serif;
   font-weight: bold;
 }
 
-.book-title {
+.name {
   color: #121212;
   font-size: 1.375rem;
   margin: 0;
@@ -76,7 +79,7 @@ nav {
   font-weight: bold;
 }
 
-.book-author {
+.author {
   color: #4386bf;
   font-size: 0.875rem;
   margin: 0;
@@ -84,65 +87,45 @@ nav {
   font-weight: 300;
 }
 
-.remove-btn {
+.left button {
   height: 1.188rem;
-  margin: 1.33rem 0 0 0;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  color: #4386bf;
   border: none;
+  color: #4386bf;
   background-color: #fff;
   cursor: pointer;
-  padding: 0 0.938rem 0 1.063rem;
+  margin: 1.33rem 0 0 0;
 }
 
-.comment-btn {
-  height: 1.188rem;
-  margin: 1.33rem 0 0 0;
-  font-family: 'Roboto Slab', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: #4386bf;
-  border: none;
+button.comments {
   border-right: 1px solid #e8e8e8;
-  background-color: #fff;
-  cursor: pointer;
   padding: 0 0.938rem 0 0;
 }
 
-.edit-btn {
-  height: 1.188rem;
-  margin: 1.33rem 0 0 0;
-  font-family: 'Roboto Slab', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: #4386bf;
-  border: none;
-  border-left: 1px solid #e8e8e8;
-  background-color: #fff;
-  cursor: pointer;
+button.remove {
   padding: 0 0.938rem 0 1.063rem;
 }
 
-.progress-container {
+button.edit {
+  border-left: 1px solid #e8e8e8;
+  padding: 0 0.938rem 0 1.063rem;
+}
+
+.middle {
   display: flex;
 }
 
-.progress-bar,
-.CircularProgressbar {
+.progress-ring {
   width: 4.25rem !important;
   height: 4.25rem;
-}
-
-.progress-bar {
   margin: 1rem 1.313rem 0 0;
 }
 
-.porcentage {
+.percent {
   margin: 1.188rem 0 0 0;
   font-size: 2rem;
-  font-family: 'Montserrat', sans-serif;
   color: #121212;
 }
 
@@ -150,28 +133,25 @@ nav {
   margin: 0;
   color: #121212;
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
 }
 
-.chapter-container {
+.right {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
   border-left: #e8e8e8 1px solid;
 }
 
 .current-chapter {
-  font-family: 'Roboto Slab', sans-serif;
-  font-weight: 300;
   margin: 0.063rem 0 0.438rem 3.688rem;
   opacity: 0.5;
 }
 
 .chapter {
-  font-family: 'Roboto Slab', sans-serif;
-  font-weight: 300;
   margin: 0 0 1.438rem 3.688rem;
 }
 
-.update-btn {
+.update {
   font-family: 'Roboto Slab', sans-serif;
   font-weight: 300;
   font-size: 0.813rem;
@@ -184,9 +164,11 @@ nav {
   cursor: pointer;
 }
 
+/* Add Book Form */
+
 .form-container {
   border-top: 1px solid #e8e8e8;
-  margin: 0 7.14%;
+  margin: 0 7vw;
 }
 
 h2 {
