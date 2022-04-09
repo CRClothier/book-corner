@@ -8,7 +8,7 @@ const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstor
 
 const defaultState = [
   {
-    item_id: 'mimsy',
+    item_id: '0',
     category: 'Loading...',
     title: '',
     author: '',
