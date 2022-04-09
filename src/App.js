@@ -1,6 +1,6 @@
 import { Link, Routes, Route } from 'react-router-dom';
 import Catalogue from './components/Catagories';
-import Books from './components/Books';
+import BooksPage from './components/BooksPage';
 import './App.css';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route exact path="/" element={<Books />} />
+          <Route exact path="/" element={<BooksPage />} />
           <Route exact path="/catalogue" element={<Catalogue />} />
         </Routes>
       </main>

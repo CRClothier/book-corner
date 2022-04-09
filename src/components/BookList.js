@@ -5,10 +5,11 @@ function Booklist() {
   const bookArray = useSelector((state) => state.books);
   const list = bookArray.map((book) => (
     <Book
-      key={book.id}
-      id={book.id}
-      name={book.name}
+      key={book.item_id}
+      id={book.item_id}
+      name={book.title}
       author={book.author}
+      category={book.category}
     />
   ));
   return (
