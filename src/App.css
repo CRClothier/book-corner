@@ -1,23 +1,222 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
 }
 
-.App-header {
-  background-color: #282c34;
+/* Header styles */
+
+header {
+  background-color: white;
+  border-bottom: 1px solid #e8e8e8;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 2.375rem;
+}
+
+.title-nav {
+  width: 45vw;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 7vw;
+}
+
+.title {
+  white-space: nowrap;
+  color: #0290ff;
+  font-size: 1.8rem;
+  width: 15rem;
+  font-weight: bold;
+  padding: 1rem 0;
 }
 
 nav {
-  display: flex;
+  margin-left: 0.7rem;
+}
+
+.login {
+  width: 45px;
+  justify-content: flex-end;
+  margin-right: 7vw;
 }
 
 .link {
-  color: #61dafb;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.83rem;
+  color: #121212;
+  margin-left: 1rem;
   padding: 1rem;
+}
+
+/* Book styles */
+
+.book {
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr;
+  margin: 0 7vw 0.938rem 7vw;
+  padding: 2rem;
+}
+
+.category {
+  color: #121212;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  margin: 0 0 0.25rem 0;
+  font-weight: bold;
+}
+
+.name {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bold;
+  color: #121212;
+  font-size: 1.375rem;
+  margin: 0;
+}
+
+.author {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bold;
+  color: #4386bf;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.left button {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  border: none;
+  color: #4386bf;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 1.33rem 0 0 0;
+}
+
+button.comments {
+  border-right: 1px solid #e8e8e8;
+  padding: 0 0.938rem 0 0;
+}
+
+button.remove {
+  padding: 0 0.93rem 0 1.063rem;
+}
+
+button.edit {
+  border-left: 1px solid #e8e8e8;
+  padding: 0 0.938rem 0 1.063rem;
+}
+
+.middle {
+  display: flex;
+}
+
+.progress-ring {
+  width: 4.25rem;
+  height: 4.25rem;
+  margin: 1rem 1.313rem 0 0;
+}
+
+.percent {
+  margin: 1.188rem 0 0 0;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  margin: 0;
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.right {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+  border-left: #e8e8e8 1px solid;
+}
+
+.current-chapter {
+  margin: 0.063rem 0 0.438rem 3.688rem;
+  opacity: 0.5;
+}
+
+.chapter {
+  margin: 0 0 1.438rem 3.688rem;
+}
+
+.update {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+  font-size: 0.813rem;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  margin-left: 3.688rem;
+  cursor: pointer;
+}
+
+/* Add Book Form */
+
+.addBooks {
+  border-top: 1px solid #e8e8e8;
+  margin: 0 7vw;
+}
+
+h2 {
+  font-weight: bold;
+  color: #888;
+  margin: 1.813rem 0 1.188rem 0;
+}
+
+form {
+  margin: 2.375rem 0 0.938rem 0;
+  display: flex;
+}
+
+.input {
+  height: 2.813rem;
+  width: 23%;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding-left: 1rem;
+  margin-right: 1rem;
+}
+
+.input::placeholder {
+  color: #c4c4c4;
+}
+
+.addBooks button {
+  height: 2.813rem;
+  width: 20%;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bold;
+  font-size: 0.813rem;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.checkStatus {
+  height: 2.813rem;
+  margin-left: 7.14vw;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.813rem;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  cursor: pointer;
 }

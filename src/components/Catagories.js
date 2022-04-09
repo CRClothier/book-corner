@@ -8,7 +8,7 @@ function Catagories() {
     dispatch(checkStatus());
   };
 
-  return <button type="button" onClick={dispatchCheckStatus}>Check Status</button>;
+  return <button className="checkStatus" type="button" onClick={dispatchCheckStatus}>Check Status</button>;
 }
 
 export default Catagories;

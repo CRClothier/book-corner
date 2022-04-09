@@ -1,17 +1,21 @@
 import { Link, Routes, Route } from 'react-router-dom';
 import Catalogue from './components/Catagories';
 import BooksPage from './components/BooksPage';
+import login from './login.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>The Book Corner</h1>
-        <nav>
-          <Link className="link" to="/">Books</Link>
-          <Link className="link" to="/catalogue">Catalogue</Link>
-        </nav>
+        <div className="title-nav">
+          <h1 className="title">The Book Corner</h1>
+          <nav>
+            <Link className="link" to="/">Books</Link>
+            <Link className="link" to="/catalogue">Catalogue</Link>
+          </nav>
+        </div>
+        <img className="login" src={login} alt="user" />
       </header>
       <main>
         <Routes>
