@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="title-nav">
-          <h1 className="title">Bookstore CMS</h1>
+          <h1 className="title">The Book Corner</h1>
           <nav>
             <Link className="link" to="/">Books</Link>
             <Link className="link" to="/catalogue">Catalogue</Link>
