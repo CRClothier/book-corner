@@ -3,13 +3,13 @@ import Book from './Book';
 
 function Booklist() {
   const bookArray = useSelector((state) => state.books);
-  const list = Object.keys(bookArray).map((book) => (
+  const list = bookArray.map((book) => (
     <Book
-      key={book}
-      id={book}
-      name={bookArray[book][0].title}
-      author={bookArray[book][0].author}
-      category={bookArray[book][0].category}
+      key={book.item_id}
+      id={book.item_id}
+      name={book.title}
+      author={book.author}
+      category={book.category}
     />
   ));
   return (

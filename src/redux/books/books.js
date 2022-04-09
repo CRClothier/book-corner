@@ -6,15 +6,14 @@ const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1zVIwx934H10PajbnnI8/books';
 
-const defaultState = {
-  item1: [
-    {
-      category: 'Loading...',
-      title: '',
-      author: '',
-    },
-  ],
-};
+const defaultState = [
+  {
+    item_id: 'mimsy',
+    category: 'Loading...',
+    title: '',
+    author: '',
+  },
+];
 
 // Reducer
 export default function booksReducer(state = defaultState, action) {
@@ -57,15 +56,18 @@ export function removeBook(ID) {
 
 export const updateBooksThunk = () => (dispatch) => axios.get(API)
   .then((res) => res.data)
-  .then((books) => {
+  .then((data) => {
+    const books = Object.keys(data).map((id) => ({
+      item_id: id,
+      ...data[id][0],
+    }));
     dispatch(updateBooks(books));
   });
 
-export const addBookThunk = () => (dispatch) => axios.get(API)
-  .then((res) => res.data)
-  .then((books) => {
-    dispatch(updateBooks(books));
-  });
+export const addBookThunk = (book) => async (dispatch) => {
+  await axios.post(API, book);
+  dispatch(addBook(book));
+};
 
 export const removeBookThunk = () => (dispatch) => axios.get(API)
   .then((res) => res.data)
