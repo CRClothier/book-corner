@@ -1,22 +1,17 @@
+import axios from 'axios';
+
 // Actions
 const UPDATE_BOOKS = 'UPDATE_BOOKS';
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
-// const API = '1zVIwx934H10PajbnnI8';
+const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1zVIwx934H10PajbnnI8/books';
 
 const defaultState = {
   item1: [
     {
-      category: 'Fiction',
-      title: 'The GMorbidreat Gatsby',
-      author: 'Luxby Chincha',
-    },
-  ],
-  item2: [
-    {
-      category: 'Truth',
-      author: 'John Jhon Jon Jones',
-      title: 'Pies',
+      category: 'Loading...',
+      title: '',
+      author: '',
     },
   ],
 };
@@ -29,7 +24,8 @@ export default function booksReducer(state = defaultState, action) {
 
     case (REMOVE_BOOK):
       return state.filter((book) => book.id !== action.id);
-
+    case (UPDATE_BOOKS):
+      return action.books;
     default:
       return state;
   }
@@ -56,3 +52,23 @@ export function removeBook(ID) {
     id: ID,
   };
 }
+
+// Thunks
+
+export const updateBooksThunk = () => (dispatch) => axios.get(API)
+  .then((res) => res.data)
+  .then((books) => {
+    dispatch(updateBooks(books));
+  });
+
+export const addBookThunk = () => (dispatch) => axios.get(API)
+  .then((res) => res.data)
+  .then((books) => {
+    dispatch(updateBooks(books));
+  });
+
+export const removeBookThunk = () => (dispatch) => axios.get(API)
+  .then((res) => res.data)
+  .then((books) => {
+    dispatch(updateBooks(books));
+  });
