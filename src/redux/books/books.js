@@ -22,7 +22,7 @@ export default function booksReducer(state = defaultState, action) {
       return [...state, action.new];
 
     case (REMOVE_BOOK):
-      return state.filter((book) => book.id !== action.id);
+      return state.filter((book) => book.item_id !== action.id);
     case (UPDATE_BOOKS):
       return action.books;
     default:
@@ -69,8 +69,7 @@ export const addBookThunk = (book) => async (dispatch) => {
   dispatch(addBook(book));
 };
 
-export const removeBookThunk = () => (dispatch) => axios.get(API)
-  .then((res) => res.data)
-  .then((books) => {
-    dispatch(updateBooks(books));
-  });
+export const removeBookThunk = (id) => async (dispatch) => {
+  await axios.delete(`${API}/${id}`);
+  dispatch(removeBook(id));
+};
